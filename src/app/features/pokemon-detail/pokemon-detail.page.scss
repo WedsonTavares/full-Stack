@@ -1,0 +1,57 @@
+/* src/app/features/pokemon-detail/pokemon-detail.page.scss */
+
+.detail-card {
+  position: relative;
+  padding-top: 1.5rem; /* espaço extra para o botão */
+
+  .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 10;
+  }
+}
+
+.detail-img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+
+.detail-content {
+  padding: 1rem;
+}
+
+// Grid para organizar as infos em colunas
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.abilities {
+  grid-column: 1 / -1; // ocupa toda a largura
+}
+
+// Áudio centralizado
+.detail-audio {
+  display: block;
+  margin: 0.5rem auto 0 auto;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+  .detail-img {
+    width: 150px;
+    height: 150px;
+  }
+  .info-grid {
+    grid-template-columns: 1fr; // uma coluna só em mobile
+  }
+  .detail-card {
+    padding: 1rem;
+  }
+}

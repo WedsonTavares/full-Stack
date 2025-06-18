@@ -11,23 +11,36 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-card *ngIf="pokemon">
-    <ion-img [src]="pokemon.sprites.front_default"></ion-img>
+  <ion-card *ngIf="pokemon" class="detail-card">
+    <!-- botão de fechar agora dentro do card -->
+    <ion-button
+      fill="clear"
+      color="medium"
+      class="close-btn"
+      (click)="closeDetail()"
+      size="small">
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+
+    <ion-img [src]="pokemon.sprites.front_default" class="detail-img"></ion-img>
     <ion-card-header>
       <ion-card-title>{{ pokemon.name | titlecase }}</ion-card-title>
       <ion-card-subtitle>#{{ pokemon.id }}</ion-card-subtitle>
     </ion-card-header>
-    <ion-card-content>
-      <p><strong>Tipo:</strong> {{ pokemon.types[0].type.name | titlecase }}</p>
-      <p><strong>Experiência Base:</strong> {{ pokemon.base_experience }}</p>
-      <p><strong>Peso:</strong> {{ pokemon.weight / 10 }} kg</p>
-      <p><strong>Altura:</strong> {{ pokemon.height / 10 }} m</p>
-      <p><strong>Habilidades:</strong>
-        <span *ngFor="let ab of pokemon.abilities; let last = last">
-          {{ ab.ability.name | titlecase }}<span *ngIf="!last">, </span>
-        </span>
-      </p>
-      <audio *ngIf="pokemon.cries?.latest" controls>
+    <ion-card-content class="detail-content">
+      <div class="info-grid">
+        <div><strong>Tipo:</strong> {{ pokemon.types[0].type.name | titlecase }}</div>
+        <div><strong>Exp. Base:</strong> {{ pokemon.base_experience }}</div>
+        <div><strong>Peso:</strong> {{ pokemon.weight / 10 }} kg</div>
+        <div><strong>Altura:</strong> {{ pokemon.height / 10 }} m</div>
+        <div class="abilities">
+          <strong>Habilidades:</strong>
+          <span *ngFor="let ab of pokemon.abilities; let last = last">
+            {{ ab.ability.name | titlecase }}<span *ngIf="!last">, </span>
+          </span>
+        </div>
+      </div>
+      <audio *ngIf="pokemon.cries?.latest" controls class="detail-audio">
         <source [src]="pokemon.cries.latest" type="audio/ogg">
         Seu navegador não suporta áudio.
       </audio>
