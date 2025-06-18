@@ -1,0 +1,51 @@
+.pokemon-card {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 2;
+}
+
+ion-card {
+  text-align: center;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  }
+}
+
+ion-img {
+  width: 120px;
+  height: 120px;
+  margin: 16px auto 0 auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+ion-card-title {
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+ion-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  ion-img {
+    width: 80px;
+    height: 80px;
+  }
+  ion-card-title {
+    font-size: 1rem;
+  }
+}
