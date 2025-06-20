@@ -22,3 +22,11 @@
 /* —————————————————————— */
 /* Importa suas variáveis globais */
 @import "theme/variables";
+
+@import "theme/variables";
+
+/* fundo leve para todo o conteúdo */
+ion-app, ion-content {
+  background: var(--ion-color-light-bg) !important;
+  color: var(--ion-color-light-text) !important;
+}

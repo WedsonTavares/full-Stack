@@ -1,3 +1,31 @@
 <ion-app>
+  <!-- Header fixo -->
+  <ion-header>
+    <ion-toolbar color="primary" class="app-header">
+      <!-- logo PokéAPI -->
+      <ion-buttons slot="start">
+        <img src="assets/pokeapi-logo.png" class="header-logo" />
+      </ion-buttons>
+
+      <!-- navegação reduzida -->
+      <ion-buttons slot="end" class="nav-buttons">
+        <!-- Sobre -->
+        <ion-button fill="clear" routerLink="/about">Sobre</ion-button>
+
+        <!-- Projetos -->
+        <ion-button fill="clear" routerLink="/projects">Projetos</ion-button>
+
+        <!-- Redes Sociais -->
+        <ion-button fill="clear" href="https://linkedin.com/in/wedsontavares" target="_blank">
+          LinkedIn
+        </ion-button>
+        <ion-button fill="clear" href="https://github.com/WedsonTavares" target="_blank">
+          GitHub
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- conteúdo dinâmico -->
   <ion-router-outlet></ion-router-outlet>
 </ion-app>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule, NavController } from '@ionic/angular';   // <-- adicione NavController
+import { IonicModule, NavController } from '@ionic/angular';   
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -18,7 +18,7 @@ export class PokemonDetailPage {
 
   constructor(
     private route: ActivatedRoute,
-    private navCtrl: NavController    // <-- injete aqui
+    private navCtrl: NavController    
   ) {}
 
   async ngOnInit() {
@@ -30,6 +30,6 @@ export class PokemonDetailPage {
   }
 
   closeDetail() {
-    this.navCtrl.back();            // volta pra lista
+    this.navCtrl.back();           
   }
 }

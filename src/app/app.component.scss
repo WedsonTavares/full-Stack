@@ -1,0 +1,20 @@
+ion-toolbar.app-header {
+  display: flex !important;
+  align-items: center !important;
+
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.header-logo {
+  height: 32px;
+  margin: 0 1rem;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+}
